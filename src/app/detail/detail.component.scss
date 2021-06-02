@@ -1,0 +1,22 @@
+@import "assets/sass/core/variables/gradient-variables.scss";
+
+.forecast-cell {
+  max-width: 300px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      &:first-child {
+        color: green;
+      }
+    }
+  }
+}
+
+.form-search {
+  width: 400px;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+}

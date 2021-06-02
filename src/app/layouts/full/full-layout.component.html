@@ -1,0 +1,78 @@
+<div class="story-modal" id="story-modal" style="display: none;">
+  <div class="content">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-body">
+          <a href="javascript:void(0);" class="pull-right" style="font-size: 17px;" onClick="document.getElementById('story-modal').style.display = 'none'"><i class="fa fa-times"></i></a>
+          <div class="clearfix"></div>
+          <a href="#" class="media pt-0 pb-2 align-items-center">
+            <img class="mr-3 avatar rounded" src="https://s3.polygon.io/logos/gwre/logo.png" alt="Avatar" width="35">
+            <div class="media-body">
+              <h4 class="font-medium-1 mb-0">GWRE</h4>
+              <p class="grey font-small-3 m-0">Guideware Software Inc.</p>
+            </div>
+            <div style="color: green;">
+              <i _ngcontent-uqy-c168="" class="ft-trending-up"></i>
+              98%
+            </div>
+          </a>
+          <p>
+            NIKE Inc. Class B (NKE) has just announced that Q4,2021 Earnings Results will be serviced at 24 Jun 2021 (AMC). Their aim for EPS is 0,53 and Revenue is 11.120,00M. Let’s see that, will NKE be able to meet their expectations for this quarter. Please keep in mind that NIKE Inc. Class B could beat EPS estimates on previous quarter, Q3,2021 but unfortunately missed it Revenue estimates. FYI, Revenue of the same quarter a year ago(Q4,2020) was 6.310,00M.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- *NAVBAR* starts -->
+<app-navbar (seachTextEmpty)="checkNavbarSeachTextEmpty($event)"></app-navbar>
+<!-- *NAVBAR* ends -->
+
+<div class="wrapper" [ngClass]="{'show-overlay': !isNavbarSeachTextEmpty}" (click)="onWrapperClick();" (window:resize)="onResize($event)">
+
+  <!-- *TOP* Menu starts -->
+  <app-horizontal-menu appTopMenu *ngIf="menuPosition === 'Top' && !displayOverlayMenu"></app-horizontal-menu>
+  <!-- *TOP* Menu ends -->
+
+  <!-- *SIDE* Menu starts -->
+  <div appSidebar *ngIf="menuPosition === 'Side' || displayOverlayMenu"
+    [ngClass]="{'main-menu': menuPosition === 'Side' || displayOverlayMenu, 'menu-fixed': menuPosition === 'Side' || displayOverlayMenu, 'menu-native-scroll': !perfectScrollbarEnable }" class="app-sidebar"
+    (mouseenter)="sidebarMouseenter($event)" (mouseleave)="sidebarMouseleave($event)" data-active-color="white"
+    [attr.data-background-color]="config?.layout.variant === 'Transparent' ? 'black': bgColor"
+    [attr.data-image]="bgImage">
+    <app-sidebar></app-sidebar>
+    <div class="sidebar-background" [ngStyle]="{'background-image': 'url(' + bgImage + ')'}"
+      *ngIf="config?.layout.sidebar.backgroundImage"></div>
+  </div>
+  <!-- *SIDE* Menu ends -->
+
+  <div class="main-panel">
+    <div class="main-content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <app-footer></app-footer>
+    <!-- Scroll to top button -->
+    <button class="btn btn-primary scroll-top" type="button" *ngIf="isScrollTopVisible" (click)="scrollToTop()"><i class="ft-arrow-up"></i></button>
+  </div>
+
+  <!-- *NOTIFICATION-SIDEBAR* starts -->
+  <app-notification-sidebar></app-notification-sidebar>
+  <!-- *NOTIFICATION-SIDEBAR* ends -->
+
+  <!-- *CUSTOMIZER* starts -->
+  <app-customizer></app-customizer>
+  <!-- *CUSTOMIZER* ends -->
+
+  <div class="buy-now">
+    <!-- Buy now button -->
+    <a href="https://1.envato.market/apex_admin" target="_blank" class="btn btn-danger">Buy Now</a>
+  </div>
+  <div class="sidenav-overlay" (click)="onOutsideClick($event);"
+    [ngClass]="{'d-none': displayOverlayMenu && hideSidebar && !overlayContent , 'd-block': displayOverlayMenu && !hideSidebar && overlayContent && innerWidth < 1200}"></div>
+  <div class="drag-target"></div>
+</div>

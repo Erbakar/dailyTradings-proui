@@ -1,0 +1,12 @@
+@import "assets/sass/core/variables/gradient-variables.scss";
+
+.earning-media {
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  padding: 1rem!important;
+  transition: background-color 350ms;
+}
+
+.earning-media:hover {
+  background: #f1f1f1;
+}
