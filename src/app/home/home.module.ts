@@ -20,7 +20,8 @@ import { MatchHeightModule } from "../shared/directives/match-height.directive";
     AngularResizedEventModule,
   ],
   exports: [],
-  declarations: [],
+  declarations: [
+  ],
   providers: [],
 })
 export class HomeModule { }

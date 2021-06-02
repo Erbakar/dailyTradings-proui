@@ -31,7 +31,6 @@ import { FullLayoutComponent } from "./layouts/full/full-layout.component";
 import { AuthService } from "./shared/auth/auth.service";
 import { AuthGuard } from "./shared/auth/auth-guard.service";
 import { WINDOW_PROVIDERS } from './shared/services/window.service';
-import { HomeComponent } from './home/home.component';
 import { BrowserModule } from "@angular/platform-browser";
 
 var firebaseConfig = {

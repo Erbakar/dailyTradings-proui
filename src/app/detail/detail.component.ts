@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DetailComponent implements OnInit {
   showStories = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
