@@ -158,106 +158,30 @@ export var lineChartSingle = [
 
 export var lineChartMulti = [
   {
-    "name": "Germany",
+    "name": "",
     "series": [
       {
-        "name": "2010",
+        "name": "1 Hour Ago",
         "value": 700
       },
       {
-        "name": "2011",
-        "value": 750
-      },
-      {
-        "name": "2012",
-        "value": 775
-      },
-      {
-        "name": "2013",
-        "value": 725
-      },
-      {
-        "name": "2014",
-        "value": 750
-      },
-      {
-        "name": "2015",
-        "value": 800
-      },
-      {
-        "name": "2016",
-        "value": 860
-      }
-    ]
-  },
-
-  {
-    "name": "USA",
-    "series": [
-      {
-        "name": "2010",
-        "value": 650
-      },
-      {
-        "name": "2011",
-        "value": 800
-      },
-      {
-        "name": "2012",
+        "name": "15 Minutes Ago",
         "value": 705
       },
       {
-        "name": "2013",
-        "value": 750
-      },      
-      {
-        "name": "2014",
-        "value": 850
+        "name": "5 Minutes Ago",
+        "value": 710
       },
       {
-        "name": "2015",
-        "value": 875
-      },      
+        "name": "1 Minute Ago",
+        "value": 708
+      },
       {
-        "name": "2016",
-        "value": 730
-      }
+        "name": "Nightly Change",
+        "value": 714
+      },
     ]
   },
-
-  {
-    "name": "France",
-    "series": [
-      {
-        "name": "2010",
-        "value": 660
-      },
-      {
-        "name": "2011",
-        "value": 720
-      },
-      {
-        "name": "2012",
-        "value": 680
-      },
-      {
-        "name": "2013",
-        "value": 675
-      },      
-      {
-        "name": "2014",
-        "value": 700
-      },
-      {
-        "name": "2015",
-        "value": 680
-      },      
-      {
-        "name": "2016",
-        "value": 690
-      }
-    ]
-  }
 ];
 
 //Area Chart
@@ -330,7 +254,7 @@ export var areaChartMulti = [
       {
         "name": "2013",
         "value": 750
-      },      
+      },
       {
         "name": "2014",
         "value": 850
@@ -338,7 +262,7 @@ export var areaChartMulti = [
       {
         "name": "2015",
         "value": 875
-      },      
+      },
       {
         "name": "2016",
         "value": 730

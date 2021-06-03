@@ -25,7 +25,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { SharedModule } from "./shared/shared.module";
 import * as fromApp from './store/app.reducer';
 import { AppComponent } from "./app.component";
-import { ContentLayoutComponent } from "./layouts/content/content-layout.component";
 import { FullLayoutComponent } from "./layouts/full/full-layout.component";
 
 import { AuthService } from "./shared/auth/auth.service";
@@ -55,7 +54,7 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, FullLayoutComponent, ContentLayoutComponent],
+  declarations: [AppComponent, FullLayoutComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

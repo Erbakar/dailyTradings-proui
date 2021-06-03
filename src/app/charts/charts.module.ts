@@ -24,7 +24,7 @@ import { ApexComponent } from './apex/apex.component';
     declarations: [
         ChartistComponent,
         ChartjsComponent,
-        NGXChartsComponent,
+        // NGXChartsComponent,
         ApexComponent
     ],
 })

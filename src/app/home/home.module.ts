@@ -7,6 +7,9 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularResizedEventModule } from 'angular-resize-event';
 import { MatchHeightModule } from "../shared/directives/match-height.directive";
+import { CalendarsModule } from 'app/calendar/calendar.module';
+import { HomeComponent } from './home.component';
+import { CalendarModule } from 'angular-calendar';
 
 
 @NgModule({
@@ -18,9 +21,11 @@ import { MatchHeightModule } from "../shared/directives/match-height.directive";
     MatchHeightModule,
     NgApexchartsModule,
     AngularResizedEventModule,
+    CalendarModule,
   ],
   exports: [],
   declarations: [
+    HomeComponent
   ],
   providers: [],
 })
