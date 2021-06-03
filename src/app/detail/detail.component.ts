@@ -8,7 +8,7 @@ import * as chartsData from '../shared/configs/ngx-charts.config';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-  showStories = false;
+  activeTab: string = 'opportunities';
 
   lineChartMulti = lineChartMulti;
   //Line Charts

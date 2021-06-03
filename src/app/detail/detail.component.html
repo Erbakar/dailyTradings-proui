@@ -191,20 +191,20 @@
 
 <div class="row">
   <div class="col col-xs-12" style="margin-top: 50px;">
-    <button class="btn btn-primary"
-      style="width: calc((100% / 6) - 5px); padding: 10px; margin-right: 5px;">Opportunities</button>
-    <button class="btn btn-outline-primary"
-      style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px">Previous Earning Effects</button>
-    <button class="btn btn-outline-primary" style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px">Other
+    <button [ngClass]="activeTab == 'opportunities' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+      style="width: calc((100% / 6) - 5px); padding: 10px; margin-right: 5px;" (click)="activeTab = 'opportunities'">Opportunities</button>
+    <button [ngClass]="activeTab == 'with-effects' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+      style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px" (click)="activeTab = 'with-effects'">Previous Earning Effects</button>
+    <button [ngClass]="activeTab == 'predictions' ? 'btn btn-primary' : 'btn btn-outline-primary'" style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px" (click)="activeTab = 'predictions'">Other
       Whispers From Websites</button>
-    <button class="btn btn-outline-primary"
-      style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px">Earning Analyses per Peers</button>
-    <button class="btn btn-outline-primary"
-      style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px">Previous Dividend Effects</button>
-    <button class="btn btn-outline-primary"
-      style="width: calc((100% / 6) - 5px); padding: 10px; margin-left: 5px;">Competitors</button>
+    <button [ngClass]="activeTab == 'peers' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+      style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px" (click)="activeTab = 'peers'">Earning Analyses per Peers</button>
+    <button [ngClass]="activeTab == 'effects' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+      style="width: calc((100% / 6) - 10px); padding: 10px; margin: 0px 5px" (click)="activeTab = 'effects'">Previous Dividend Effects</button>
+    <button [ngClass]="activeTab == 'competitors' ? 'btn btn-primary' : 'btn btn-outline-primary'"
+      style="width: calc((100% / 6) - 5px); padding: 10px; margin-left: 5px;" (click)="activeTab = 'competitors'">Competitors</button>
   </div>
-  <div class="col col-xs-12 col-md-12">
+  <div class="col col-xs-12 col-md-12" *ngIf="activeTab == 'opportunities'">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title mb-0">Symbol's Opportunities</h4>
@@ -536,7 +536,7 @@
       </div>
     </div>
   </div>
-  <div class="col col-xs-12 col-md-12">
+  <div class="col col-xs-12 col-md-12" *ngIf="activeTab == 'with-effects' || activeTab == 'peers' || activeTab == 'effects' || activeTab == 'competitors'">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title mb-0">Earnings with Effects</h4>
@@ -745,7 +745,7 @@
       </div>
     </div>
   </div>
-  <div class="col col-xs-12 col-md-12">
+  <div class="col col-xs-12 col-md-12" *ngIf="activeTab == 'predictions'">
     <div class="card">
       <div class="card-header">
         <h4 class="card-title mb-0">Other Predictions From Websites</h4>
